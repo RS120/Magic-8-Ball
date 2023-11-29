@@ -5,12 +5,14 @@ document.getElementById("magic8ball").addEventListener("click", imgClicked);
 function imgClicked() {
   let randNum = Math.random();
   console.log(randNum);
-
+  
+  // Define Variables
   let q1 = "Does a magic 8 ball actually work?";
   let q2 = "Is JavaScript awesome?";
   let q3 = "Are you real?";
   let question = document.getElementById("question").value;
 
+  // Random Response
   if (question.length === 0) {
     document.getElementById("answer-in").innerHTML = "Please ask a question...";
   } else if (question === q1) {
@@ -26,6 +28,7 @@ function imgClicked() {
   } else if (randNum < 0.6) {
     document.getElementById("answer-in").innerHTML =
       "Concentrate and ask again";
+    // Specific Responses
   } else if (randNum < 0.8) {
     document.getElementById("answer-in").innerHTML = "Don't count on it";
   } else if (randNum < 1) {
