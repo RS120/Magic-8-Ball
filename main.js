@@ -1,3 +1,5 @@
+// Magic 8 Ball by Ruhan Shah
+
 // Button Event Listener
 
 document.getElementById("magic8ball").addEventListener("click", imgClicked);
@@ -12,7 +14,7 @@ function imgClicked() {
   let q3 = "Are you real?";
   let question = document.getElementById("question").value;
 
-  // Random Response
+  // Specific Responses
   if (question.length === 0) {
     document.getElementById("answer-in").innerHTML = "Please ask a question...";
   } else if (question === q1) {
@@ -21,6 +23,7 @@ function imgClicked() {
     document.getElementById("answer-in").innerHTML = "Of Course!";
   } else if (question === q3) {
     document.getElementById("answer-in").innerHTML = "I might be...";
+      // Random Response
   } else if (randNum < 0.2) {
     document.getElementById("answer-in").innerHTML = "Without a Doubt";
   } else if (randNum < 0.4) {
@@ -28,7 +31,6 @@ function imgClicked() {
   } else if (randNum < 0.6) {
     document.getElementById("answer-in").innerHTML =
       "Concentrate and ask again";
-    // Specific Responses
   } else if (randNum < 0.8) {
     document.getElementById("answer-in").innerHTML = "Don't count on it";
   } else if (randNum < 1) {
